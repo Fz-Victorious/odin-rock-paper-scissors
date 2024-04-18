@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-sec-page.css">
+</head>
+<body>
+        <div class="rounds-title"></div>
+        <div class="players-section">
+            <div class="player-section">
+                <div class="computer-score score">
+                    <div class="title">Computer</div>
+                    <img src="./portable.png" alt="user image" class="player-img">
+                </div>
+                <div class="computer-options-icons option-icons">
+                    <img src="./papier.png" alt="" class="player-icon paper-com">
+                    <img src="./roche.png" alt="" class="player-icon rock-com">
+                    <img src="./les-ciseaux.png" alt="" class="player-icon scissors-com"> 
+                </div>
+            </div>
+            <div class="player-section">
+                <div class="user-options-icons option-icons">
+                        <img src="./papier.png" alt="" class="player-icon paper">
+                        <img src="./roche.png" alt="" class="player-icon rock">
+                        <img src="./les-ciseaux.png" alt="" class="player-icon scissors">
+
+                </div>
+                <div class="user-score score">
+                    <div class="title">You</div>
+                    <img src="./homme.png" alt="user image" class="player-img">
+                </div>
+            </div>
+        </div>
+        <div class="round-result"></div>
+        <!-- <div class="final-result-popup">
+            <div class="result">
+                <div></div>
+                <button></button>
+            </div>
+        </div> -->
+        <div id="final-result-popup">
+            <div id="popup">
+                <div class="text"></div>
+                <button>Play Again</button>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <script src="file.js"></script>
+</body>
+</html>

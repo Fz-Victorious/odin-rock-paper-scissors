@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: black;
+    font-family: "Poppins", sans-serif;
+}
+.wrapper{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 3% 2%;
+}
+.left-top-section{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    align-items: center;
+    justify-content: center;
+}
+.titles{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    color:#fbbf24;
+    font-weight: bold;
+}
+.rock{
+    font-size: 100px;
+}
+.paper{
+    font-size: 80px;
+    margin-top: -40px;
+    margin-left: 20px;
+}
+.scissors{
+    font-size: 60px;
+    margin-top: -30px;
+    margin-left: 40px;
+}
+lottie-player{
+    border-radius: 50%;
+    background-color: #fbbf24;
+    align-self: center;
+}
+.text{
+    color:rgb(196, 181, 181);
+    font-size: 22px;
+}
+
+a{
+    align-self: center;
+    background-color: #fbbf24;
+    border-radius: 25px;
+    padding: 10px 60px;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+.about-title{
+    font-size: 40px;
+    font-weight: 500;
+    color:#fbbf24;
+}
+.about-text{
+    color:rgb(196, 181, 181);
+    max-width:800px;
+    align-self: center;
+    font-size: 21px;
+    position: relative;
+}
+.about-text::before{
+    content: "";
+    background-color: #fbbf24;
+    position: absolute;
+    top:0;
+    left:-3%;
+    height: 100%;
+    width: 8px;
+}
+
+img{
+    width:300px;
+    background-color: #fbbf24;
+    border-radius: 50%;
+}
