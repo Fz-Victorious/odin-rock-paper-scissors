@@ -10,3 +10,6 @@ addEventListner to listen to the user click on a specific button to make his cho
 
 # Third step:
 play five rounds to decide whose the final winner depending on his score!
+
+# screenshots:
+![Capture d’écran 2024-04-19 015135](https://github.com/Fz-Victorious/odin-rock-paper-scissors/assets/100221567/623eb341-4993-42e3-a7c5-8402f1098b60)
