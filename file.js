@@ -6,10 +6,6 @@ let comScoreElement = document.querySelector(".computer-score");
 let userScoreElement = document.querySelector(".user-score");
 let roundsTitle = document.querySelector(".rounds-title");
 let roundResult = document.querySelector(".round-result");
-const allChoices = document.querySelectorAll('.player-icon');
-const paperChoice = document.querySelector(".paper");
-const rockChoice = document.querySelector(".rock");
-const scissorsChoice = document.querySelector(".scissors");
 let text;
 
 roundsTitle.innerText = `Round ${round}`;
@@ -72,6 +68,7 @@ document.querySelector("button").onclick = ()=>{
     comScoreElement.setAttribute("com-score", "0");
     userScoreElement.setAttribute("user-score", "0");
     let i = 0;
+    let allChoices = document.querySelectorAll('.player-icon');
     while(i < 6)
     {
         allChoices[i].style="";
@@ -97,33 +94,18 @@ function getComputerChoice()
     return choiceString[rand];
 }
 
-
-//paper choice
-paperChoice.addEventListener("click", () =>{
-    rockChoice.style = "";
-    scissorsChoice.style = "";
-    paperChoice.style = "width:80px; border: 5px solid green";
-    let userChoice = "paper";
-    let compChoice = getComputerChoice();
-    playRound(userChoice, compChoice);   
-});
-
-//rock choice
-rockChoice.addEventListener("click", () =>{
-    scissorsChoice.style = "";
-    paperChoice.style = "";
-    rockChoice.style = "width:80px; border: 5px solid green";
-    let userChoice = "rock";
-    let compChoice = getComputerChoice();
-    playRound(userChoice, compChoice);   
-});
-
-//scissors choice
-scissorsChoice.addEventListener("click", () =>{
-    rockChoice.style = "";
-    paperChoice.style = "";
-    scissorsChoice.style = "width:80px; border: 5px solid green";
-    let userChoice = "scissors";
-    let compChoice = getComputerChoice();
-    playRound(userChoice, compChoice);   
-});
+let userChoices = document.querySelectorAll(".user-icon");
+userChoices.forEach((userChoice)=>{
+    userChoice.style = "";
+    userChoice.addEventListener("click", (e)=>{
+        for(let index=0; index < 3; index++){
+            if (userChoices[index] !== userChoice){
+                userChoices[index].style = "";
+            }
+        }
+        e.target.style = "width:80px; border: 5px solid green";
+        let userChoiceName = userChoice.getAttribute("class").split(" ");
+        let compChoice = getComputerChoice();
+        playRound(userChoiceName[2], compChoice);  
+    })
+})
